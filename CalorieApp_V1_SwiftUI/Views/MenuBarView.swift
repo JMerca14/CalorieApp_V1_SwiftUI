@@ -18,7 +18,7 @@ struct MenuBarView: View {
                 .foregroundColor(CustomColors.backdropAccentColor)
             
             NavigationLink(destination: AddCalorieView()) {
-                Image("logo")
+                Image("Logo")
                     .resizable()
                     .frame(width: 100, height: 100)
                     .shadow(color: .black, radius: 5, x: 0, y: 5)
