@@ -16,11 +16,11 @@ struct HomeView: View {
                 ZStack {
                     Rectangle()
                         .background(.ultraThinMaterial)
-                        .foregroundColor(CustomColors.backdropAccentColor.opacity(0.6))
+                        .foregroundColor(CustomColors.backdropAccentColor.opacity(0.8))
                         .foregroundStyle(.ultraThinMaterial)
                         .cornerRadius(10)
                         .frame(height: 360)
-                        .opacity(0.75)
+                        .opacity(0.8)
                         .zIndex(0)
                     
                     VStack (alignment: .leading){
@@ -51,10 +51,10 @@ struct HomeView: View {
                     ZStack {
                         Rectangle()
                             .background(.ultraThinMaterial)
-                            .foregroundColor(CustomColors.backdropAccentColor.opacity(0.35))
+                            .foregroundColor(CustomColors.backdropAccentColor.opacity(0.8))
                             .foregroundStyle(.ultraThinMaterial)
                             .cornerRadius(10)
-                            .opacity(0.75)
+                            .opacity(0.8)
                         
                         VStack {
                             VStack(alignment: .leading) {
@@ -85,10 +85,10 @@ struct HomeView: View {
                     ZStack {
                         Rectangle()
                             .background(.ultraThinMaterial)
-                            .foregroundColor(CustomColors.backdropAccentColor.opacity(0.35))
+                            .foregroundColor(CustomColors.backdropAccentColor.opacity(0.8))
                             .foregroundStyle(.ultraThinMaterial)
                             .cornerRadius(10)
-                            .opacity(0.75)
+                            .opacity(0.8)
                         
                         VStack {
                             VStack(alignment: .leading) {
