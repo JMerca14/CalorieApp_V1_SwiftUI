@@ -11,7 +11,7 @@ import SwiftUI
 struct CalorieApp_V1_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().preferredColorScheme(.dark)
         }
     }
 }
