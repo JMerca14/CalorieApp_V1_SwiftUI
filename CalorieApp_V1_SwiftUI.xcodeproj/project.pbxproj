@@ -15,6 +15,11 @@
 		0EC07EC52919E0A3000C4A71 /* ProgressViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */; };
 		0EC07EC9291A2352000C4A71 /* AddCalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */; };
 		0EC07ECC291AD60E000C4A71 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07ECB291AD60E000C4A71 /* ProfileView.swift */; };
+		2599B560291C9D9200D316D8 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B55F291C9D9200D316D8 /* Header.swift */; };
+		2599B562291CA10400D316D8 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B561291CA10400D316D8 /* BarGraph.swift */; };
+		2599B565291CA37700D316D8 /* Calorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B564291CA37700D316D8 /* Calorie.swift */; };
+		25EC14B5291BF0D1003FAE71 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC14B4291BF0D1003FAE71 /* HomeView.swift */; };
+		25EC14BC291C2BD7003FAE71 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EC14BB291C2BD7003FAE71 /* CircularProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewNew.swift; sourceTree = "<group>"; };
 		0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalorieView.swift; sourceTree = "<group>"; };
 		0EC07ECB291AD60E000C4A71 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2599B55F291C9D9200D316D8 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2599B561291CA10400D316D8 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		2599B564291CA37700D316D8 /* Calorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calorie.swift; sourceTree = "<group>"; };
+		25EC14B4291BF0D1003FAE71 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		25EC14BB291C2BD7003FAE71 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +69,10 @@
 		0EC07EAD29188769000C4A71 /* CalorieApp_V1_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2599B563291CA35A00D316D8 /* Models */,
 				0EC07EB029188769000C4A71 /* Content View.swift */,
 				0EC07ECA291AD479000C4A71 /* Views */,
+				25EC14B6291BF264003FAE71 /* Elements */,
 				0EC07EAE29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift */,
 				0EC07EB22918876B000C4A71 /* Assets.xcassets */,
 				0EC07EB42918876B000C4A71 /* Preview Content */,
@@ -79,12 +91,39 @@
 		0EC07ECA291AD479000C4A71 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2599B55E291C9D6A00D316D8 /* Pages */,
 				0EC07EBE29197490000C4A71 /* MenuBarView.swift */,
+				2599B55F291C9D9200D316D8 /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2599B55E291C9D6A00D316D8 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
 				0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */,
 				0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */,
 				0EC07ECB291AD60E000C4A71 /* ProfileView.swift */,
+				25EC14B4291BF0D1003FAE71 /* HomeView.swift */,
 			);
-			path = Views;
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		2599B563291CA35A00D316D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2599B564291CA37700D316D8 /* Calorie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		25EC14B6291BF264003FAE71 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				25EC14BB291C2BD7003FAE71 /* CircularProgressBar.swift */,
+				2599B561291CA10400D316D8 /* BarGraph.swift */,
+			);
+			path = Elements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,8 +196,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2599B562291CA10400D316D8 /* BarGraph.swift in Sources */,
+				2599B560291C9D9200D316D8 /* Header.swift in Sources */,
 				0EC07EB129188769000C4A71 /* Content View.swift in Sources */,
+				25EC14B5291BF0D1003FAE71 /* HomeView.swift in Sources */,
+				25EC14BC291C2BD7003FAE71 /* CircularProgressBar.swift in Sources */,
 				0EC07EAF29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift in Sources */,
+				2599B565291CA37700D316D8 /* Calorie.swift in Sources */,
 				0EC07EC9291A2352000C4A71 /* AddCalorieView.swift in Sources */,
 				0EC07EC52919E0A3000C4A71 /* ProgressViewNew.swift in Sources */,
 				0EC07ECC291AD60E000C4A71 /* ProfileView.swift in Sources */,
@@ -291,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalorieApp_V1_SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = UYC3CK4BQD;
+				DEVELOPMENT_TEAM = FPVCQZJWBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CalFit;
@@ -324,7 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CalorieApp_V1_SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = UYC3CK4BQD;
+				DEVELOPMENT_TEAM = FPVCQZJWBM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = CalFit;

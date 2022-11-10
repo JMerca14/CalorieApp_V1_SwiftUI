@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct MenuBarView: View {
-    //@ObservedObject var menuObject = MenuClass.shared
     @EnvironmentObject var menuObject: MenuClass
-    var falseBool = false
-    var trueBool = true
     
     var body: some View {
-        Text("Hi")
+        ZStack (alignment: .center){
+            Image("Home_Icon")
+                .resizable()
+                .frame(width: 300, height: 150)
+                .foregroundColor(CustomColors.backdropAccentColor)
+            
+            NavigationLink(destination: AddCalorieView()) {
+                Image("logo")
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .shadow(color: .black, radius: 5, x: 0, y: 5)
+                    .padding(.bottom, 25)
+            }
+            .zIndex(2)
+        }
         /*ZStack {
             Spacer()
             
