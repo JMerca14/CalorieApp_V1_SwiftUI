@@ -112,11 +112,11 @@
 		2599B55E291C9D6A00D316D8 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */,
 				0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */,
-				0EC07ECB291AD60E000C4A71 /* ProfileView.swift */,
 				25EC14B4291BF0D1003FAE71 /* HomeView.swift */,
 				25F4C5552926F77F00A3115A /* DashboardView.swift */,
+				0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */,
+				0EC07ECB291AD60E000C4A71 /* ProfileView.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";

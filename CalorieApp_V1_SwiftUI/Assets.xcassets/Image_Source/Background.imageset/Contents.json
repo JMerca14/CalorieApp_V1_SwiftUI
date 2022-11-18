@@ -1,8 +1,19 @@
 {
   "images" : [
     {
-      "filename" : "Background_Image_SVG.svg",
-      "idiom" : "universal"
+      "filename" : "Background@x1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Background@x2.pdf",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Background@x3.pdf",
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

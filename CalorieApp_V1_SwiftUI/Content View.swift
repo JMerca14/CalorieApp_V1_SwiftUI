@@ -72,7 +72,7 @@ struct ContentView: View {
                 }
                 .cornerRadius(menuIsShowing ? 20 : 10)
                 .offset(x: menuIsShowing ? 300 : 0, y: menuIsShowing ? 44 : -7)
-                .scaleEffect(menuIsShowing ? 0.8 : 1)
+                .scaleEffect(menuIsShowing ? 0.75 : 1)
                 .shadow(radius: 30)
             }
             .onAppear {
