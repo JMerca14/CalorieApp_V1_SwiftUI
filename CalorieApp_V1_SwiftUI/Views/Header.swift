@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct Header: View {
+    @Binding var menuIsShowing: Bool
     var title: String
     var body: some View {
         HStack {
             
             Button(action: {
-                
+                withAnimation(.spring()) {
+                    menuIsShowing.toggle()
+                }
             }) {
                 Image("Menu_Button")
                 Text(title)
@@ -41,6 +44,6 @@ struct Header: View {
 
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
-        Header(title: "Hello, World!")
+        Header(menuIsShowing: .constant(true), title: "Dashboard")
     }
 }

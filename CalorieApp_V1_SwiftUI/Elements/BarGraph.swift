@@ -78,9 +78,6 @@ struct BarGraph: View {
                             
                             let yValue = Swift.min(calorie.count/10, 200)
                             VStack {
-                                //Text("\(calorie.count)").font(.caption).foregroundColor((Int(calorie.count) >= Int(averageCalories)) ? Color.orange : Color.gray)
-                                
-                                
                                 
                                 RoundedRectangle(cornerRadius: 5)
                                     .fill((Int(calorie.count) >= Int(averageCalories)) ? Color.orange : Color.gray) //change orange to gradient

@@ -28,31 +28,37 @@ class MenuClass : ObservableObject {
 struct ContentView: View {
     // - MARK: Observable Objects
     @ObservedObject var menuObject = MenuClass()
+    @State private var menuIsShowing = true
     var body: some View {
         NavigationView {
+            
             ZStack {
-                Image("Background")
-                    .resizable()
-                    .scaledToFill()
-                    .edgesIgnoringSafeArea(.all)
-                    .zIndex(0)
-                VStack {
-                    // HEADER
-                    Header(title: "Dashboard")
-                        .padding(.bottom, 10)
-                    // Home
-                    HomeView()
-                    
+                if menuIsShowing {
+                    SideMenuView(menuIsShowing: $menuIsShowing)
+                        .padding(.top, 30)
                 }
-                .padding(.vertical, 50)
-                .padding(.horizontal, 30)
-                .edgesIgnoringSafeArea(.all)
-                
-                
-                // Main Add Button
-                MenuBarView()
-                    .frame(maxHeight: .infinity, alignment: .bottom)
-                    .zIndex(2)
+                //HomeView
+                ZStack {
+                    Image("Background")
+                        .resizable()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                    VStack {
+                        // HEADER
+                        Header(menuIsShowing: $menuIsShowing, title: "Home")
+                            .padding(.bottom, 10)
+                        // Home
+                        HomeView()
+                        
+                    }
+                    .padding(.vertical, 50)
+                    .padding(.horizontal, 30)
+                    .edgesIgnoringSafeArea(.all)
+                    
+                    
+                    // Main Add Button
+                    MenuBarView()
+                        .frame(maxHeight: .infinity, alignment: .bottom)
                 }
                 .onAppear {
                     menuObject.dailyKCalPercent = Double(menuObject.inputtedCalories) / 2500.0
@@ -64,9 +70,16 @@ struct ContentView: View {
                         UserDefaults.standard.set(Date(), forKey: "curDate")
                     }
                 }
-                
+                .cornerRadius(menuIsShowing ? 20 : 10)
+                .offset(x: menuIsShowing ? 300 : 0, y: menuIsShowing ? 44 : -7)
+                .scaleEffect(menuIsShowing ? 0.8 : 1)
+                .shadow(radius: 30)
             }
-            .environmentObject(menuObject)
+            .onAppear {
+                menuIsShowing.toggle()
+            }
+        }
+        .environmentObject(menuObject)
         
     }
 }
