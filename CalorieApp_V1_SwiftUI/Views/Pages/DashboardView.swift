@@ -79,7 +79,6 @@ struct DashboardView: View {
                     }
                     .frame(height: 360)
                     .padding(.top, 20)
-                    
                     // Small Cards
                     HStack {
                         ZStack {
@@ -148,7 +147,6 @@ struct DashboardView: View {
                         }
                     }
                     .padding(.top, 20)
-                    
                     // Medium Card
                     ZStack {
                         Rectangle()
@@ -177,10 +175,12 @@ struct DashboardView: View {
                     }
                     .frame(height: 180)
                     .padding(.top, 20)
+                    .padding(.bottom, 20)
                 }
             }
             .padding()
             .padding(.top, 50)
+            .padding(.bottom, 30)
         }
     }
 }
