@@ -18,6 +18,7 @@ struct DashboardView: View {
             
             ScrollView {
                 VStack {
+                    
                     // Medium Card
                     ZStack {
                         Rectangle()
@@ -29,6 +30,7 @@ struct DashboardView: View {
                             .opacity(0.8)
                             .zIndex(0)
                         
+                        //Placeholder
                         VStack {
                             HStack {
                                 VStack(alignment: .leading) {
@@ -45,6 +47,7 @@ struct DashboardView: View {
                         
                     }
                     .frame(height: 180)
+                    
                     // Big Card
                     ZStack {
                         Rectangle()
@@ -56,29 +59,43 @@ struct DashboardView: View {
                             .opacity(0.8)
                             .zIndex(0)
                         
-                        VStack (alignment: .leading){
-                            NavigationLink(destination: ProgressViewNew()) {
-                                let calories = [
-                                    Calorie(count: 1149, day: "S"),
-                                    Calorie(count: 1750, day: "M"),
-                                    Calorie(count: 2150, day: "T"),
-                                    Calorie(count: 650, day: "W"),
-                                    Calorie(count: 1000, day: "T"),
-                                    Calorie(count: 1250, day: "F"),
-                                    Calorie(count: 1850, day: "S")
-                                ]
-                                BarGraph(data: calories)
-                                    .frame(alignment: .center)
-                                    .padding(.top, -25)
-                                    .padding(.horizontal, 15)
+                        //Placeholder
+                        VStack {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text("Large Card")
+                                        .foregroundColor(.white)
+                                        .bold()
+                                        .font(.system(size: 30))
+                                        .padding()
+                                }
+                                Spacer()
                             }
-                            .frame(alignment: .center)
+                            //VStack (alignment: .leading){
+                            //    NavigationLink(destination: ProgressViewNew()) {
+                            //        let calories = [
+                            //            Calorie(count: 1149, day: "S"),
+                            //            Calorie(count: 1750, day: "M"),
+                            //            Calorie(count: 2150, day: "T"),
+                            //            Calorie(count: 650, day: "W"),
+                            //            Calorie(count: 1000, day: "T"),
+                            //            Calorie(count: 1250, day: "F"),
+                            //            Calorie(count: 1850, day: "S")
+                            //        ]
+                            //        BarGraph(data: calories)
+                            //            .frame(alignment: .center)
+                            //            .padding(.top, -25)
+                            //            .padding(.horizontal, 15)
+                            //    }
+                            //    .frame(alignment: .center)
+                            //}
+                            //.frame(maxWidth: .infinity, alignment: .trailing)
+                            
                         }
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                        
+                        .frame(height: 360)
+                        .padding(.top, 20)
                     }
-                    .frame(height: 360)
-                    .padding(.top, 20)
+                    
                     // Small Cards
                     HStack {
                         ZStack {
@@ -89,25 +106,38 @@ struct DashboardView: View {
                                 .cornerRadius(10)
                                 .opacity(0.8)
                             
+                            //Placeholder
                             VStack {
-                                VStack(alignment: .leading) {
-                                    Text("\(menuObject.inputtedCalories) KCal(s)")
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .font(.system(size: 20))
-                                    
-                                    Text("Today's KCal Intake")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 15))
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("Small Card")
+                                            .foregroundColor(.white)
+                                            .bold()
+                                            .font(.system(size: 10))
+                                            .padding()
+                                    }
+                                    Spacer()
                                 }
                                 
-                                Spacer()
-                                    .frame(height: 25)
-                                
-                                CircularProgressBar(value: Double(menuObject.dailyKCalPercent)).frame(width: 100, height: 100)
-                                    .padding(15)
-                                
-                                
+                                //VStack {
+                                //    VStack(alignment: .leading) {
+                                //        Text("\(menuObject.inputtedCalories) KCal(s)")
+                                //            .foregroundColor(.white)
+                                //            .bold()
+                                //            .font(.system(size: 20))
+                                //
+                                //        Text("Today's KCal Intake")
+                                //            .foregroundColor(.gray)
+                                //            .font(.system(size: 15))
+                                //    }
+                                //
+                                //    Spacer()
+                                //        .frame(height: 25)
+                                //
+                                //    CircularProgressBar(value: Double(menuObject.dailyKCalPercent)).frame(width: 100, height: 100)
+                                //        .padding(15)
+                                //
+                                //
                             }
                             .padding(10)
                         }
@@ -123,30 +153,43 @@ struct DashboardView: View {
                                 .cornerRadius(10)
                                 .opacity(0.8)
                             
+                            //Placeholder
                             VStack {
-                                VStack(alignment: .leading) {
-                                    Text("\(menuObject.inputtedCalories) KCal(s)")
-                                        .foregroundColor(.white)
-                                        .bold()
-                                        .font(.system(size: 20))
-                                    
-                                    Text("Today's KCal Intake")
-                                        .foregroundColor(.gray)
-                                        .font(.system(size: 15))
+                                HStack {
+                                    VStack(alignment: .leading) {
+                                        Text("Small Card")
+                                            .foregroundColor(.white)
+                                            .bold()
+                                            .font(.system(size: 10))
+                                            .padding()
+                                    }
+                                    Spacer()
                                 }
-                                
-                                Spacer()
-                                    .frame(height: 25)
-                                
-                                CircularProgressBar(value: Double(menuObject.dailyKCalPercent)).frame(width: 100, height: 100)
-                                    .padding(15)
-                                
-                                
+                                //VStack {
+                                //    VStack(alignment: .leading) {
+                                //        Text("\(menuObject.inputtedCalories) KCal(s)")
+                                //            .foregroundColor(.white)
+                                //            .bold()
+                                //            .font(.system(size: 20))
+                                //
+                                //        Text("Today's KCal Intake")
+                                //            .foregroundColor(.gray)
+                                //            .font(.system(size: 15))
+                                //    }
+                                //
+                                //    Spacer()
+                                //        .frame(height: 25)
+                                //
+                                //    CircularProgressBar(value: Double(menuObject.dailyKCalPercent)).frame(width: 100, height: 100)
+                                //        .padding(15)
+                                //
+                                //
                             }
                             .padding(10)
                         }
                     }
                     .padding(.top, 20)
+                    
                     // Medium Card
                     ZStack {
                         Rectangle()
@@ -184,6 +227,7 @@ struct DashboardView: View {
         }
     }
 }
+
 
 struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
