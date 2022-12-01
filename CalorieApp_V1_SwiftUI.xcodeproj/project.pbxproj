@@ -15,6 +15,10 @@
 		0EC07EC52919E0A3000C4A71 /* ProgressViewNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */; };
 		0EC07EC9291A2352000C4A71 /* AddCalorieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */; };
 		0EC07ECC291AD60E000C4A71 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07ECB291AD60E000C4A71 /* ProfileView.swift */; };
+		251D59BC292F07D200DDEF3B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D59BB292F07D200DDEF3B /* LoginView.swift */; };
+		251D59BE292F07E100DDEF3B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D59BD292F07E100DDEF3B /* RegisterView.swift */; };
+		251D59C1292F0D4300DDEF3B /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251D59C0292F0D4300DDEF3B /* CustomTextField.swift */; };
+		25462E50292FBF1100D04A28 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25462E4F292FBF1100D04A28 /* CustomSecureField.swift */; };
 		2599B560291C9D9200D316D8 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B55F291C9D9200D316D8 /* Header.swift */; };
 		2599B562291CA10400D316D8 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B561291CA10400D316D8 /* BarGraph.swift */; };
 		2599B565291CA37700D316D8 /* Calorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2599B564291CA37700D316D8 /* Calorie.swift */; };
@@ -37,6 +41,10 @@
 		0EC07EC42919E0A3000C4A71 /* ProgressViewNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewNew.swift; sourceTree = "<group>"; };
 		0EC07EC8291A2352000C4A71 /* AddCalorieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalorieView.swift; sourceTree = "<group>"; };
 		0EC07ECB291AD60E000C4A71 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		251D59BB292F07D200DDEF3B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		251D59BD292F07E100DDEF3B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		251D59C0292F0D4300DDEF3B /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		25462E4F292FBF1100D04A28 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		2599B55F291C9D9200D316D8 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		2599B561291CA10400D316D8 /* BarGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 		2599B564291CA37700D316D8 /* Calorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calorie.swift; sourceTree = "<group>"; };
@@ -101,12 +109,32 @@
 		0EC07ECA291AD479000C4A71 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				251D59BA292F07BE00DDEF3B /* Authentification */,
 				25E461B62924AFBE0059F6B3 /* SideMenu */,
 				2599B55E291C9D6A00D316D8 /* Pages */,
 				0EC07EBE29197490000C4A71 /* MenuBarView.swift */,
 				2599B55F291C9D9200D316D8 /* Header.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		251D59BA292F07BE00DDEF3B /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				251D59BF292F082500DDEF3B /* Models */,
+				251D59BB292F07D200DDEF3B /* LoginView.swift */,
+				251D59BD292F07E100DDEF3B /* RegisterView.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		251D59BF292F082500DDEF3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				251D59C0292F0D4300DDEF3B /* CustomTextField.swift */,
+				25462E4F292FBF1100D04A28 /* CustomSecureField.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		2599B55E291C9D6A00D316D8 /* Pages */ = {
@@ -228,11 +256,15 @@
 				25EC14B5291BF0D1003FAE71 /* HomeView.swift in Sources */,
 				25EC14BC291C2BD7003FAE71 /* CircularProgressBar.swift in Sources */,
 				0EC07EAF29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift in Sources */,
+				251D59BE292F07E100DDEF3B /* RegisterView.swift in Sources */,
 				25E461B82924AFD30059F6B3 /* SideMenuView.swift in Sources */,
+				251D59BC292F07D200DDEF3B /* LoginView.swift in Sources */,
+				25462E50292FBF1100D04A28 /* CustomSecureField.swift in Sources */,
 				2599B565291CA37700D316D8 /* Calorie.swift in Sources */,
 				0EC07EC9291A2352000C4A71 /* AddCalorieView.swift in Sources */,
 				25E461BC2924B1C70059F6B3 /* SideMenuViewModel.swift in Sources */,
 				0EC07EC52919E0A3000C4A71 /* ProgressViewNew.swift in Sources */,
+				251D59C1292F0D4300DDEF3B /* CustomTextField.swift in Sources */,
 				0EC07ECC291AD60E000C4A71 /* ProfileView.swift in Sources */,
 				0EC07EBF29197490000C4A71 /* MenuBarView.swift in Sources */,
 			);

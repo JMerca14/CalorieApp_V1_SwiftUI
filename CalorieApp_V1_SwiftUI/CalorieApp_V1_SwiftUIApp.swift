@@ -11,7 +11,11 @@ import SwiftUI
 struct CalorieApp_V1_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().preferredColorScheme(.dark)
+            //If user defaults exist {
+            //ContentView().preferredColorScheme(.dark)
+            //} else {
+            RegisterView().preferredColorScheme(.dark)
+            //}
         }
     }
 }
