@@ -18,6 +18,8 @@ class MenuClass : ObservableObject {
     @Published var isShowingProfile = false
     @Published var isCalorieAdder = false
     
+    @Published var dataArray = UserDefaults.standard.object(forKey: "AppData") as? [String: Int] ?? [:] // This is our datastore
+    
     @Published var inputtedCalories = UserDefaults.standard.integer(forKey: "DailyKCal")
     @Published var dailyKCalPercent = 0.0
     @Published var curDate = UserDefaults.standard.object(forKey: "curDate") ?? Date()
