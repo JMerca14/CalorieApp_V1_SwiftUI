@@ -40,7 +40,7 @@ struct RegisterView: View {
                 Section (header: Text("BMI")) {
                     
                     if units == "metric" {
-                        Stepper("Height (\(height.formatted()))",
+                        Stepper("Height (\(height.rounded(.towardZero).formatted()))",
                                 value: $height,
                                 in: 137.16...205.74)
                         
@@ -48,27 +48,38 @@ struct RegisterView: View {
                                 value: $weight,
                                 in: 45...200)
                     } else {
-                        Stepper("Height (\(heightToImperial(x: height)))",
+                        let heightArray = inchesToFeet(x: height)
+                        Stepper("Height (\(heightArray[0])' \(heightArray[1])\")",
                                 value: $height,
-                                in: 137.16...205.74)
+                                in: 137.16...205.74, step: 3)
                         
                         Stepper("Weight (\((weightToImperial(x: weight).rounded(.towardZero).formatted())))", value: $weight, in: 45...200, step: 0.5)
                     }
                 }
-                Section {
-                    Button(action: { self.submit.toggle() }) {
-                            Text("Create Profile")
+                Section (){
+                    //Button(action: {self.submit.toggle() }) {
+                        //Text("Create Profile")
+                        //Need to create func that adds user defaults and goes to dashboard
                         
-                        //Need to create func that adds user defaults and goes to dashboard 
+                    //}
+                    NavigationLink(destination: ContentView()) {
+                            Text("Create Profile")
+                            .foregroundColor(.orange)
                     }
                 }
+                
             }
             .navigationTitle("Create Profile")
         }
     }
-    func heightToImperial(x: Float) -> Float{
-        return (x/2.54)/12
+    func inchesToFeet(x: Float) -> Array<Int> {
+        let totalInches = x*0.393701
+        let feet = (totalInches.rounded(.towardZero)/12).rounded(.towardZero)
+        let inches = totalInches-(feet * 12)
+        let height = [Int(feet), Int(inches)]
+        return height
     }
+    
     func weightToImperial(x: Float) -> Float {
         return x*2.205
     }
@@ -76,6 +87,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView().preferredColorScheme(.dark)
     }
 }

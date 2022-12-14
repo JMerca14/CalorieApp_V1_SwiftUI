@@ -72,17 +72,18 @@ struct ContentView: View {
                         UserDefaults.standard.set(Date(), forKey: "curDate")
                     }
                 }
-                .cornerRadius(menuIsShowing ? 20 : 10)
-                .offset(x: menuIsShowing ? 300 : 0, y: menuIsShowing ? 44 : -7)
-                .scaleEffect(menuIsShowing ? 0.8 : 1)
-                .shadow(radius: 30)
+                //.cornerRadius(menuIsShowing ? 20 : 10)
+                .offset(x: menuIsShowing ? 300 : 0, y: -13)
+                            //menuIsShowing ? 44 : -13)
+                //.scaleEffect(menuIsShowing ? 0.8 : 1)
+                //.shadow(radius: 30)
             }
             .onAppear {
                 menuIsShowing.toggle()
             }
         }
         .environmentObject(menuObject)
-        
+        .navigationBarHidden(true)
     }
 }
 
@@ -90,6 +91,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(MenuClass())
+            .environmentObject(MenuClass()).preferredColorScheme(.dark)
     }
 }

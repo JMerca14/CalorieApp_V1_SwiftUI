@@ -28,16 +28,22 @@ struct Header: View {
             }
             
             Spacer()
-            
-            NavigationLink(destination: ProfileView()){
-                Button(action: {
-                    
-                }) {
-                    Image("PFP")
-                        .resizable()
-                        .frame(width: 35, height: 35)
-                }
+            HStack {
+                Text("74")
+                    .foregroundColor(Color.white)
+                    .padding(.leading, 5)
+                Image("match")
+                    .resizable()
+                    .frame(width: 35, height: 35, alignment: .center)
+                    .padding(.top, 10)
+                    .padding(.leading, -10)
             }
+            .frame(width: 75, height: 35)
+            .background(Color("Backdrop").opacity(0.8))
+            .clipShape(
+                RoundedRectangle(cornerRadius: 20)
+            )
+            
         }
     }
 }
