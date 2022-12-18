@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @EnvironmentObject var menuObject: MenuClass
     @State var firstName: String = ""
     @State var lastName: String = ""
     @State var gender: String = ""
@@ -16,6 +17,7 @@ struct RegisterView: View {
     @State var weight: Float = 45
     @State var units: String = "metric"
     @State var submit: Bool = false
+    
     var body: some View {
         NavigationView {
             Form {
@@ -57,21 +59,36 @@ struct RegisterView: View {
                     }
                 }
                 Section (){
-                    //Button(action: {self.submit.toggle() }) {
-                        //Text("Create Profile")
-                        //Need to create func that adds user defaults and goes to dashboard
-                        
-                    //}
-                    NavigationLink(destination: ContentView()) {
-                            Text("Create Profile")
+                    Button() {
+                        menuObject.isReg = false
+                        menuObject.regOffset["x"] = 500
+                        menuObject.profileDataArray["FirstName"] = firstName
+                        menuObject.profileDataArray["LastName"] = lastName
+                        menuObject.profileDataArray["Gender"] = gender
+                        menuObject.profileDataArray["pronouns"] = pronouns
+                        menuObject.profileDataArray["height"] = String(height)
+                        menuObject.profileDataArray["weight"] = String(weight)
+                        menuObject.profileDataArray["units"] = units
+                        UserDefaults.standard.set(menuObject.profileDataArray, forKey: "AppDataV1")
+                    } label: {
+                        Text("Create Profile")
                             .foregroundColor(.orange)
                     }
+                    /*NavigationLink(destination: ContentView()) {
+                            Text("Create Profile")
+                            .foregroundColor(.orange)
+                    }*/
                 }
-                
             }
             .navigationTitle("Create Profile")
+            .onDisappear() {
+                print("fuck")
+                self.menuObject.profileDataArray["FirstName"] = firstName
+                print(menuObject.profileDataArray["FirstName"]!)
+            }
         }
     }
+    
     func inchesToFeet(x: Float) -> Array<Int> {
         let totalInches = x*0.393701
         let feet = (totalInches.rounded(.towardZero)/12).rounded(.towardZero)
@@ -88,5 +105,6 @@ struct RegisterView: View {
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         RegisterView().preferredColorScheme(.dark)
+            .environmentObject(MenuClass())
     }
 }
