@@ -17,6 +17,7 @@ struct RegisterView: View {
     @State var weight: Float = 45
     @State var units: String = "metric"
     @State var submit: Bool = false
+    let UtilManager = UtilityManager()
     
     var body: some View {
         NavigationView {
@@ -69,23 +70,20 @@ struct RegisterView: View {
                         menuObject.profileDataArray["height"] = String(height)
                         menuObject.profileDataArray["weight"] = String(weight)
                         menuObject.profileDataArray["units"] = units
-                        UserDefaults.standard.set(menuObject.profileDataArray, forKey: "AppDataV1")
+                        menuObject.profileDataArray["DailyNecessaryCalories"] = String(UtilManager.calculateCalorieNeeds(weight: Double(menuObject.profileDataArray["weight"]!)!, height: Double(menuObject.profileDataArray["height"]!)!, age: 23, gender: menuObject.profileDataArray["Gender"]!, activityLevel: "sedentary"))
+                        
+                        do {
+                            try UtilManager.saveData(data: menuObject.profileDataArray, to: "AppDataTestV4.json")
+                        } catch {
+                            print("An error occurred: \(error)")
+                        }
                     } label: {
                         Text("Create Profile")
                             .foregroundColor(.orange)
                     }
-                    /*NavigationLink(destination: ContentView()) {
-                            Text("Create Profile")
-                            .foregroundColor(.orange)
-                    }*/
                 }
             }
             .navigationTitle("Create Profile")
-            .onDisappear() {
-                print("fuck")
-                self.menuObject.profileDataArray["FirstName"] = firstName
-                print(menuObject.profileDataArray["FirstName"]!)
-            }
         }
     }
     

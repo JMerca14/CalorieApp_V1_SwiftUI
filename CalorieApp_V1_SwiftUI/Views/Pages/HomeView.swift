@@ -24,18 +24,18 @@ struct HomeView: View {
                     .zIndex(0)
                 
                 VStack {
-                        VStack {
-                            Text("17 Day Streak!")
-                                .foregroundColor(.orange)
-                                .bold()
-                                .font(.largeTitle)
-                            
-                            Text("Set your goals ablaze.")
-                                .foregroundColor(.white)
-                                .bold()
-                                .font(.title)
-                        }
-                        Spacer()
+                    VStack {
+                        Text("17 Day Streak!")
+                            .foregroundColor(.orange)
+                            .bold()
+                            .font(.largeTitle)
+                        
+                        Text("Set your goals ablaze.")
+                            .foregroundColor(.white)
+                            .bold()
+                            .font(.title)
+                    }
+                    Spacer()
                     
                 }
                 .frame(height: 150)

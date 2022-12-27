@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E7126A5295A9F720079A813 /* UtilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7126A4295A9F710079A813 /* UtilityManager.swift */; };
 		0EC07EAF29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EAE29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift */; };
 		0EC07EB129188769000C4A71 /* Content View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC07EB029188769000C4A71 /* Content View.swift */; };
 		0EC07EB32918876B000C4A71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC07EB22918876B000C4A71 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E7126A4295A9F710079A813 /* UtilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityManager.swift; sourceTree = "<group>"; };
 		0EC07EAB29188769000C4A71 /* CalorieApp_V1_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieApp_V1_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC07EAE29188769000C4A71 /* CalorieApp_V1_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieApp_V1_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0EC07EB029188769000C4A71 /* Content View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Content View.swift"; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E7126A3295A9F560079A813 /* Utility_Container */ = {
+			isa = PBXGroup;
+			children = (
+				0E7126A4295A9F710079A813 /* UtilityManager.swift */,
+			);
+			path = Utility_Container;
+			sourceTree = "<group>";
+		};
 		0EC07EA229188769000C4A71 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		0EC07EAD29188769000C4A71 /* CalorieApp_V1_SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				0E7126A3295A9F560079A813 /* Utility_Container */,
 				2599B563291CA35A00D316D8 /* Models */,
 				0EC07EB029188769000C4A71 /* Content View.swift */,
 				0EC07ECA291AD479000C4A71 /* Views */,
@@ -251,6 +262,7 @@
 				25F4C5562926F77F00A3115A /* DashboardView.swift in Sources */,
 				25E461BA2924B17F0059F6B3 /* SideMenuHeaderView.swift in Sources */,
 				2599B560291C9D9200D316D8 /* Header.swift in Sources */,
+				0E7126A5295A9F720079A813 /* UtilityManager.swift in Sources */,
 				0EC07EB129188769000C4A71 /* Content View.swift in Sources */,
 				25E461BE2924B2040059F6B3 /* SideMenuItemView.swift in Sources */,
 				25EC14B5291BF0D1003FAE71 /* HomeView.swift in Sources */,

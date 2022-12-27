@@ -17,14 +17,17 @@ struct MenuBarView: View {
                 .frame(width: 300, height: 150)
                 .foregroundColor(CustomColors.backdropAccentColor)
             
-            NavigationLink(destination: AddCalorieView()) {
+            Button {
+                menuObject.isCalorieAdder.toggle()
+                menuObject.PopUpSize["y"]! = menuObject.isCalorieAdder ? menuObject.PopUpSize["AnimHeight"]! : 610.0
+                menuObject.calorieAdderOpacity = menuObject.isCalorieAdder ? 0.8 : 0
+            } label: {
                 Image("Logo")
                     .resizable()
                     .frame(width: 100, height: 100)
                     .shadow(color: .black, radius: 5, x: 0, y: 5)
                     .padding(.bottom, 25)
             }
-            .zIndex(2)
         }
         /*ZStack {
             Spacer()
